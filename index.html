@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Acadêmico</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #eef2f3, #dfe9f3);
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a252f;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Meu Trabalho da Faculdade</h1>
+    <p>Site com HTML, CSS e JavaScript</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container">
+
+    <section id="inicio" class="card">
+        <h2>Início</h2>
+        <p>Bem-vindo ao meu site! Clique no botão abaixo 👇</p>
+        <button onclick="mostrarMensagem()">Clique aqui</button>
+    </section>
+
+    <section id="sobre" class="card">
+        <h2>Sobre</h2>
+        <p>Este site foi criado para demonstrar conhecimentos em desenvolvimento web.</p>
+    </section>
+
+    <section id="galeria" class="card">
+        <h2>Galeria</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Imagem exemplo">
+        <p>Imagem ilustrativa de exemplo.</p>
+    </section>
+
+    <section id="contato" class="card">
+        <h2>Contato</h2>
+        <form onsubmit="enviarFormulario(event)">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea rows="4" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 - Meu Nome</p>
+    <p>Desenvolvido para fins acadêmicos</p>
+</footer>
+
+<script>
+    function mostrarMensagem() {
+        alert("Você clicou no botão! 🎉");
+    }
+
+    function enviarFormulario(event) {
+        event.preventDefault();
+        alert("Mensagem enviada com sucesso!");
+    }
+</script>
+
+</body>
+</html>
